@@ -11,8 +11,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="lib/fontawesome.css" />
+    <link rel="stylesheet" href="lib/swiper.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/spinner.css" />
+    <script src="lib/swiper.js"></script>
     <script src="js/script.js" defer></script>
     <title>Flixx</title>
   </head>
@@ -32,132 +34,27 @@
         </nav>
       </div>
     </header>
-
+    <!-- In Theater -->
+    <!-- Now Playing Section -->
+    <section class="now-playing">
+      <h2>Airing Today</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- <div class="swiper-slide">
+            <a href="movie-details.html?id=1">
+              <img src="./images/no-image.jpg" alt="Movie Title" />
+            </a>
+            <h4 class="swiper-rating">
+              <i class="fas fa-star text-secondary"></i> 8 / 10
+            </h4>
+          </div> -->
+        </div>
+      </div>
+    </section>
     <!-- Popular TV Shows -->
     <section class="container">
       <h2>Popular TV Shows</h2>
-      <div id="popular-shows" class="grid">
-        <div class="card">
-          <a href="tv-details.html?id=1">
-            <img
-              src="images/no-image.jpg"
-              class="card-img-top"
-              alt="Show Title"
-            />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Show Title</h5>
-            <p class="card-text">
-              <small class="text-muted">Aired: XX/XX/XXXX</small>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <a href="tv-details.html?id=1">
-            <img
-              src="images/no-image.jpg"
-              class="card-img-top"
-              alt="Show Title"
-            />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Show Title</h5>
-            <p class="card-text">
-              <small class="text-muted">Aired: XX/XX/XXXX</small>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <a href="tv-details.html?id=1">
-            <img
-              src="images/no-image.jpg"
-              class="card-img-top"
-              alt="Show Title"
-            />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Show Title</h5>
-            <p class="card-text">
-              <small class="text-muted">Aired: XX/XX/XXXX</small>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <a href="tv-details.html?id=1">
-            <img
-              src="images/no-image.jpg"
-              class="card-img-top"
-              alt="Show Title"
-            />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Show Title</h5>
-            <p class="card-text">
-              <small class="text-muted">Aired: XX/XX/XXXX</small>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <a href="tv-details.html?id=1">
-            <img
-              src="images/no-image.jpg"
-              class="card-img-top"
-              alt="Show Title"
-            />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Show Title</h5>
-            <p class="card-text">
-              <small class="text-muted">Aired: XX/XX/XXXX</small>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <a href="tv-details.html?id=1">
-            <img
-              src="images/no-image.jpg"
-              class="card-img-top"
-              alt="Show Title"
-            />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Show Title</h5>
-            <p class="card-text">
-              <small class="text-muted">Aired: XX/XX/XXXX</small>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <a href="tv-details.html?id=1">
-            <img
-              src="images/no-image.jpg"
-              class="card-img-top"
-              alt="Show Title"
-            />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Show Title</h5>
-            <p class="card-text">
-              <small class="text-muted">Aired: XX/XX/XXXX</small>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <a href="tv-details.html?id=1">
-            <img
-              src="images/no-image.jpg"
-              class="card-img-top"
-              alt="Show Title"
-            />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Show Title</h5>
-            <p class="card-text">
-              <small class="text-muted">Aired: XX/XX/XXXX</small>
-            </p>
-          </div>
-        </div>
-      </div>
+      <div id="popular-shows" class="grid"></div>
     </section>
 
     <!-- Footer -->
