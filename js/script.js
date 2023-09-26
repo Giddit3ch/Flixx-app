@@ -238,10 +238,12 @@ async function search() {
     
 
     if(global.search.term !=='' && global.search.term !== null){
-        
+      
+        const results = await searchAPIData();
+        console.log(results)
 
     } else {
-        showAlert('Please enter a search term');
+        showAlert('Please enter a search term', 'error');
     }
 }
 
@@ -319,16 +321,34 @@ function initSwipper() {
 async function fetchAPIData(endpoint) {
     const API_KEY = global.api.apiKey;
     const API_URL = global.api.apiUrl;
+
     showSpinner();
+
     const response = await fetch(`${API_URL}/${endpoint}?api_key=${API_KEY}&language=en-US`)
 
     const data = await response.json();
+
     hideSpinner();
+
     return data;
 }
 
 // Make Request to search
+async function searchAPIData() {
+  const API_KEY = global.api.apiKey;
+  const API_URL = global.api.apiUrl;
 
+  showSpinner();
+
+  const response = await fetch(
+    `${API_URL}search/${global.search.type}?api_key=${API_KEY}&language=en-US&query=${global.search.term}&page=${global.search.page}`
+  );
+
+console.log(response.json())
+  hideSpinner();
+
+  return data;
+}
 
 // show spinner
 function showSpinner() {
@@ -357,6 +377,8 @@ function showAlert(message, className) {
   alertEl.appendChild(document.createTextNode(message));
 
   document.querySelector('#alert').appendChild(alertEl);
+
+  setTimeout(() => alertEl.remove(), 3000);
 }
 
 
@@ -384,7 +406,7 @@ function init () {
             displayShowDetails();
             break;
         case '/search.html':
-            search()
+            search();
             break;
     }
     highlightActiveLink();
